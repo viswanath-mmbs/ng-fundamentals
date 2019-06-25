@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector : 'event-thumnail',
@@ -8,7 +8,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
             <div> Date : {{event?.date}} </div>
             <!-- <div [class.green]="event?.time=== '8:00 am'" [ngSwitch] = "event?.time"> Time : {{event?.time}}  > or -->
             <!-- <div [ngClass]="{green : event?.time=== '8:00 am', bold: event?.time=== '8:00 am'}" [ngSwitch] = "event?.time"> Time : {{event?.time}} > or -->
-            <div class="well" [ngClass]="getStartTimeClass()" [ngSwitch] = "event?.time"> Time : {{event?.time}} >
+            <div [ngClass]="getStartTimeClass()" [ngSwitch] = "event?.time"> Time : {{event?.time}} >
             	<span *ngSwitchCase="'8:00 am'">(Early Start)</span>
             	<span *ngSwitchCase="'10:00 am'">(Late Start)</span>
             	<span *ngSwitchDefault>(Normal Start)</span>
@@ -56,6 +56,7 @@ export class EventsThumnailComponent {
 		if (this.event && this.event.time === '8:00 am')
 			return 'red bold'; // ['red', 'bold']
 		return  
+		// this is same for inline styles as well
     }
     
 }

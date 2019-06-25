@@ -21,6 +21,7 @@
     "@angular/router": "~8.0.1",
     "ngf-bootstrap": "0.0.5",
     "rxjs": "~6.4.0",
+    "toaster": "^0.1.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
   },
