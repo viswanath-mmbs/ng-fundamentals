@@ -13,11 +13,12 @@ declare let toastr
             <div class = "row">
                 <div  *ngFor = "let event of events" class = "col-md-6">
                     <event-thumnail #thumbnail (click)="handleThumnailClickEvent(event.name)" (eventClick) = "handleEventClicked($event)" [event] = "event"> </event-thumnail>
-                    <h3>{{thumbnail.someProperty}}</h3>
+					<h3>{{thumbnail.someProperty}}</h3>
+					<!-- <button class="btn btn-primary" (click)="thumbnail.logFoo()">Log me some foo!</button> -->
                 </div>
             </div>
             
-            <button class="btn btn-primary" (click)="thumbnail.logFoo()">Log me some foo!</button>
+            
         </div>
     `,
     styles: [`

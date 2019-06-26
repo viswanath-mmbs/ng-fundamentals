@@ -9,9 +9,9 @@ npm install -g @angular/cli
 // create new project
 ng new ng-fundamentals
 
-npm install
+npm install // to update the dependencies
 
-npm start
+npm start // to start app
 
 npm install ngf-bootstrap --save
 
