@@ -17,4 +17,4 @@ npm install ngf-bootstrap --save
 
 npm install toaster --save
 
-master > initialranch > serviceComponentBranch > routingBranch > routing404Guarding > multipleModulesranch
+master > initialranch > serviceComponentBranch > routingBranch > routing404Guarding > userModuleBeralBranch
