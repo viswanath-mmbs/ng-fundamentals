@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class EventService {
 	getEvents() {
 		// here we can put code to make a ajax call and get data 
 		// for now we will hard code some data
-		return EVENTS;
+		let suject = new Subject();
+		setTimeout(() => { 
+			suject.next(EVENTS); 
+			suject.complete();
+		}, 2000);
+		return suject;
 	}
 	getEvent(id:number) {
 		return EVENTS.find(event => event.id === id);

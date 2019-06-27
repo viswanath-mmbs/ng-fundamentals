@@ -28,13 +28,13 @@ declare let toastr
 })
 export class EventsListComponent implements OnInit {
 	// passing data from parent to child
-	events:any[]
+	events:any
 	constructor(private eventService : EventService, private toastr :  ToastrService) {
 		// this.events= eventService.getEvents(); // its not recomended to load data from webservice in constructor, it is good to be in onInit()
 	}
 	
 	ngOnInit() {
-		this.events= this.eventService.getEvents();
+		this.eventService.getEvents().subscribe(events => { this.events = events});
 	}
     handleEventClicked(data) {
         console.log("data from child component" + data)
