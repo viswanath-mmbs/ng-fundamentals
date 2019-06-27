@@ -31,10 +31,23 @@ import { EventRouteActivator } from './events/event-details/event-router-activat
   providers: [
 	  EventService,
 	  EventRouteActivator,
-	  ToastrService
+	  ToastrService,
+	  { 
+		  provide: 'canDeactivateCreateEvent', 
+		  useValue: checkDirtyState
+	  }
   ],
   bootstrap: [
 	  EventsAppComponent
 	]
 })
 export class AppModule { }
+
+export function checkDirtyState(component: CreateEventComponent) {
+	console.log(component)
+	if (component.isDirty) {
+		return window.confirm("you have not save the contest, do you really want to cancel?");
+	} else {
+		return true;
+	}
+}
