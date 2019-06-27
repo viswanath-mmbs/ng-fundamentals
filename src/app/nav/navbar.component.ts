@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styles: [
     `
       .nav.navbar-nav { font-size : 15px }
-      #searchForm  {margin-right :100px }
+	  #searchForm  {margin-right :100px }
+	  li > a.active { color: #F97924 }
     `
   ]
 })
